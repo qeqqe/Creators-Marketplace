@@ -53,6 +53,7 @@ export class AuthService {
       throw { status: 500, message: 'Invalid input' };
     }
   }
+
   private generateToken(user: JwtDto) {
     return this.jwtService.sign({
       sub: user.id,
